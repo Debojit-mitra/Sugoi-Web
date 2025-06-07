@@ -46,12 +46,12 @@ const SchedulePage = () => {
     dispatch(fetchSchedule());
   }, [dispatch]);
 
-  // Debug: Log current schedule data when it changes
-  useEffect(() => {
-    if (scheduleData) {
-      console.log("Schedule data in component:", scheduleData);
-    }
-  }, [scheduleData]);
+  // // Debug: Log current schedule data when it changes
+  // useEffect(() => {
+  //   if (scheduleData) {
+  //     console.log("Schedule data in component:", scheduleData);
+  //   }
+  // }, [scheduleData]);
 
   // Handle tab change
   const handleTabChange = (event, newValue) => {

@@ -25,10 +25,10 @@ const Turnstile = ({
 
   const handleTurnstileCallback = useCallback(
     (token) => {
-      console.log(
-        "Turnstile verified with token:",
-        token ? "token received" : "no token"
-      );
+      // console.log(
+      //   "Turnstile verified with token:",
+      //   token ? "token received" : "no token"
+      // );
       if (onVerify) onVerify(token);
     },
     [onVerify]
@@ -55,19 +55,19 @@ const Turnstile = ({
   useEffect(() => {
     const renderWidget = () => {
       if (!window.turnstile) {
-        console.log("Turnstile not loaded yet, retrying...");
+        //console.log("Turnstile not loaded yet, retrying...");
         setTimeout(renderWidget, 500);
         return;
       }
 
       if (widgetRef.current?.hasChildNodes()) {
-        console.log("Turnstile already rendered, skipping.");
+        //console.log("Turnstile already rendered, skipping.");
         setWidgetLoaded(true);
         return;
       }
 
       try {
-        console.log("Rendering Turnstile widget");
+        //console.log("Rendering Turnstile widget");
 
         window.turnstile.render(widgetRef.current, {
           sitekey,

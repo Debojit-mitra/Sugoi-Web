@@ -167,7 +167,7 @@ const ResetPassword = () => {
 
     if (validateForm()) {
       try {
-        console.log("Submitting with token:", router.query.token);
+        //console.log("Submitting with token:", router.query.token);
         await dispatch(
           resetPassword({
             resetToken: router.query.token,
@@ -188,7 +188,7 @@ const ResetPassword = () => {
     // Router query is ready
     if (router.isReady) {
       const urlToken = router.query.token;
-      console.log("Token from URL:", urlToken);
+      //console.log("Token from URL:", urlToken);
 
       if (urlToken) {
         // Validate the token

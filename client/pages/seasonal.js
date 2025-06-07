@@ -103,7 +103,7 @@ const SeasonalPage = () => {
     }
 
     // Log the current season data to help debug
-    console.log("Current Season Data:", currentSeason);
+    //console.log("Current Season Data:", currentSeason);
 
     const tabKeys = Object.keys(ANIME_TYPES);
     const selectedType = tabKeys[activeTab];
