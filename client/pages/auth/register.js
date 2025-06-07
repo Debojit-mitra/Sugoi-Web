@@ -159,7 +159,7 @@ const Register = () => {
   useEffect(() => {
     // Global function to be called when Turnstile script loads
     window.onTurnstileLoaded = () => {
-      console.log("Turnstile script loaded successfully");
+      //console.log("Turnstile script loaded successfully");
     };
 
     // Add error handler for the script
@@ -783,7 +783,7 @@ const Register = () => {
         component="main"
         maxWidth="md"
         sx={{
-          py: { xs: 4, sm: 6, md: 8 },
+          py: { xs: 15, sm: 12, md: 8 },
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",

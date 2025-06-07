@@ -59,7 +59,7 @@ export const fetchSuggestions = createAsyncThunk(
     try {
       // Only fetch 4 suggestions with minimal data
       const response = await animeAPI.searchAnime(query, 1, 4);
-      console.log("Suggestions response:", response.data.data);
+      //console.log("Suggestions response:", response.data.data);
       return {
         data: response.data.data,
       };

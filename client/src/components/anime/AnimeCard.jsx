@@ -194,7 +194,7 @@ const AnimeCard = ({
                   onClick={(e) => {
                     e.stopPropagation();
                     // Add to watchlist action
-                    console.log("Add to watchlist:", anime.title);
+                    //console.log("Add to watchlist:", anime.title);
                   }}
                 >
                   <AddIcon />
@@ -493,7 +493,7 @@ const AnimeCard = ({
               onClick={(e) => {
                 e.stopPropagation();
                 // Add to watchlist action
-                console.log("Add to watchlist:", anime.title);
+                //console.log("Add to watchlist:", anime.title);
               }}
             >
               <AddIcon />

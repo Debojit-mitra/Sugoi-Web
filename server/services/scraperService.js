@@ -826,7 +826,7 @@ class AnimeScraperService {
     const queryString = new URLSearchParams(params).toString();
     const fullUrl = `${this.SEARCH_URL}?${queryString}`;
 
-    console.log("Full URL:", fullUrl); // Log the full URL
+    //console.log("Full URL:", fullUrl); // Log the full URL
     const html = await this.makeRequest(this.SEARCH_URL, params);
 
     return this.parseSearchResults(html, page, limit);

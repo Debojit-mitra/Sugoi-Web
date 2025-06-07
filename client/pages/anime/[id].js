@@ -461,18 +461,25 @@ const AnimeDetailsPage = () => {
                 <Box sx={{ position: "sticky", top: 24 }}>
                   {/* Anime Poster Skeleton */}
                   <Box
-                    sx={{ borderRadius: 2, overflow: "hidden", boxShadow: 5 }}
+                    sx={{
+                      borderRadius: 2,
+                      overflow: "hidden",
+                      backgroundColor: "background.alternate",
+                      boxShadow: 5,
+                    }}
                   >
                     <Skeleton
                       variant="rectangular"
                       animation="wave"
                       width="100%"
-                      height="450px"
+                      height="350px"
                     />
                   </Box>
 
                   {/* Action Buttons Skeleton */}
-                  <ContentCard sx={{ mt: 2, backgroundColor: "transparent" }}>
+                  <ContentCard
+                    sx={{ mt: 2, backgroundColor: "background.alternate" }}
+                  >
                     <List dense>
                       <ListItem>
                         <ListItemText
@@ -526,7 +533,7 @@ const AnimeDetailsPage = () => {
               {/* Right Column - Main Content Skeleton */}
               <Grid size={{ xs: 12, md: 9 }}>
                 {/* Title and Synopsis Skeleton */}
-                <ContentCard sx={{ backgroundColor: "transparent" }}>
+                <ContentCard sx={{ backgroundColor: "background.alternate" }}>
                   <Skeleton
                     animation="wave"
                     width="80%"
@@ -609,7 +616,7 @@ const AnimeDetailsPage = () => {
                 </ContentCard>
 
                 {/* Tabs Skeleton */}
-                <ContentCard sx={{ backgroundColor: "transparent" }}>
+                <ContentCard sx={{ backgroundColor: "background.alternate" }}>
                   <Tabs value={0}>
                     <Tab
                       label={
@@ -1137,7 +1144,7 @@ const AnimeDetailsPage = () => {
                 }}
               >
                 <AnimeActionButtons
-                  onPlay={() => console.log("Play anime:", animeDetails.title)}
+                  onPlay={() => ""}
                   onAddToList={toggleWatchlist}
                   onFavorite={toggleFavorite}
                   onShare={() => {
@@ -1148,7 +1155,7 @@ const AnimeDetailsPage = () => {
                           text: `Check out ${animeDetails.title} on Sugoi Anime!`,
                           url: window.location.href,
                         })
-                        .catch((err) => console.log("Error sharing:", err));
+                        .catch((err) => console.debug("Error sharing:", err));
                     } else {
                       navigator.clipboard
                         .writeText(window.location.href)

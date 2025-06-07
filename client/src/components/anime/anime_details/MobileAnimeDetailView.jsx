@@ -394,10 +394,7 @@ const MobileAnimeDetailView = ({
 
         {/* Action Buttons for watching, adding to list */}
         <Box sx={{ mt: 2 }}>
-          <AnimeActionButtons
-            onPlay={() => console.log("Play anime:", animeDetails.title)}
-            variant="mobile"
-          />
+          <AnimeActionButtons onPlay={() => ""} variant="mobile" />
         </Box>
       </Box>
 

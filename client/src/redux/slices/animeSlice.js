@@ -177,7 +177,7 @@ export const fetchAnimeDetails = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const response = await animeAPI.getAnimeDetails(id);
-      console.log("API Response:", response.data);
+      //console.log("API Response:", response.data);
       return response.data;
     } catch (error) {
       return rejectWithValue(
